@@ -1,0 +1,55 @@
+body{
+    background-color: bisque;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+section{
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-image:url(/img/forest.jpg) ;
+}
+nav{
+    background-color: rgba(250, 235, 215, 0.381);
+}
+nav ul{
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    display: block;
+    padding:20px 30px ;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s linear;
+}
+nav ul li a:hover{
+    color: aliceblue;
+    background-color:rgba(0, 128, 0, 0.301);
+}
+nav ul li ul{
+   position: absolute;
+   background-color: aquamarine;
+}
+nav ul li ul li{
+    display: block;
+}
+nav ul li ul li a{
+    
+    font-weight: normal;
+    display: none;
+
+}
+nav ul li:hover ul li a{
+    display:block ;
+
+}

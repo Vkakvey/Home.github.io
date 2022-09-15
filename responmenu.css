@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    font-size: 15px;
+    background-color:#ffffff ;
+    color: rgb(51, 51, 51);
+}
+.container{
+    margin: auto;
+    padding: 0;
+    height: 500vh;
+    width: 100%;
+}
+.navbar{
+    position: sticky;
+    top: 0;
+    background-color:rgba(245, 222, 179, 0.304) ;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+.navbar .responsive-nav {
+    display: flex;
+    width: 75%;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .responsive-nav .nav-center {
+    list-style-type: none;
+    align-items: center;
+    display: flex;
+}
+.navbar .responsive-nav .nav-right{
+    display: flex;
+    align-items: center;
+}
+.navbar .logo{
+    width: 25%;
+}
+.navbar .logo a{
+    text-decoration: none;
+    color: rebeccapurple;
+    font-size: 20px;
+}
+.navbar .responsive-nav .nav-center li a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 20px 30px;
+    display: block;
+}
+.navbar .responsive-nav .nav-center li a:hover{
+    color: #ffffff;
+}
+.navbar .responsive-nav .nav-center li a.active{
+    background-color: black;
+    color: #ffffff;
+}
+.navbar .responsive-nav .nav-center li:hover{
+    background-color: black;
+    transition: 0.5s;
+}
+.navbar .responsive-nav .nav-right .search-box {
+    display: flex;
+    border: 1px solid rgb(51, 51, 51);
+    width: 220px;
+}
+.navbar .responsive-nav .nav-right .search-box input{
+    width: 80%;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    padding-left: 5%;
+}
+.navbar .responsive-nav .nav-right .search-box  i{
+    width: 20%;
+    padding: 15px 0;
+    border-left: 1px solid black;
+    text-align: center;
+    background-color: aquamarine;
+    color: #ffffff;
+}
+.navbar .responsive-nav .nav-right .user{
+    font-size:20px;
+    margin-left: 15px;
+}
+.hambugur{
+    padding:5px 5px;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: black;
+    color: #ffffff;
+    animation: hambugur 1s linear infinite alternate ;
+    display: none;
+}
+@keyframes hambugur{
+    from{
+        transform: scale(1);
+    }to{
+        transform: scale(1.2);
+    }
+}
+@media(max-width:1280px) {
+    .navbar .hambugur{
+        display: block;
+    }
+    .navbar .responsive-nav{
+        flex-direction: column;
+        position: fixed;
+        top:-60%;
+        background-color: chocolate;
+        width: 100%;
+        left: 0;    
+        transition: 0.5s ;
+    }
+    .navbar .responsive-nav.active{
+        top: 9.7%;
+    }
+    .navbar .responsive-nav .nav-center{
+        flex-direction: column;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .navbar .logo{
+        padding:15px 0;
+    }
+   .navbar .responsive-nav .nav-right{
+    margin-top: 10px;
+    margin-bottom: 10px;
+   }
+}

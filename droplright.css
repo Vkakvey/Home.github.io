@@ -1,0 +1,57 @@
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-image: url(/img/coffee.jpg);
+}
+div{
+    width: 100vw;
+    height: 100vh;
+}
+nav{
+    height: 100vh;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.333);
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+nav ul li a{
+    font-weight: bold;
+    display: block;
+    padding: 20px 30px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s all linear;
+}
+nav ul li a:hover{
+    background-color: aliceblue;
+    color: black;
+}
+nav ul li ul{
+    position: absolute;
+    left: 200px;
+    top: 58px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+nav ul li ul a{
+    font-weight: normal;
+    text-transform: capitalize;
+    display: none;
+}
+nav ul li:hover ul li a{
+    display: block;
+}
+nav ul li:nth-child(3) ul{
+    top: 116px;
+}
+nav ul li:nth-child(4) ul{
+    top: 174px;
+}
